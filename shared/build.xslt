@@ -6,8 +6,11 @@
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>
-        </title>
+        <title></title>
+        <style>
+          a.midd-footer__link, a.text-white, a.footer-menu__link { color:#fff; }
+          a.button--light { color:#0d395f; }
+        </style>
         <link rel="stylesheet" href="/shared/build.css" />
         <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;700&amp;family=Open+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet" />
         <xsl:apply-templates select="xhtml:html/xhtml:head/node()" />
@@ -17,8 +20,8 @@
         <xsl:variable name="roundKey" select="*/fw:template/@application-roundKey" />
         <xsl:attribute name="class">
           <xsl:choose>
-            <xsl:when test="$roundKey = 'BL1'">theme-blse</xsl:when>
-            <xsl:otherwise>theme-college</xsl:otherwise>
+            <xsl:when test="$roundKey = 'BL1'">theme-blse <xsl:value-of select="$roundKey"/></xsl:when>
+            <xsl:otherwise>theme-college <xsl:value-of select="$roundKey"/></xsl:otherwise>
           </xsl:choose>
         </xsl:attribute>
         <nav aria-labelledby="midd-skip-link">
@@ -163,47 +166,153 @@
               </div>
             </div>
           </main>
-          <footer class="school-footer school-footer--lite">
-            <div class="container">
-              <div class="row">
-                <div class="school-footer__primary">
-                  <p class="school-footer__text">Middlebury C.V. Starr Schools Abroad</p>
-                  <a href="http://go.middlebury.edu/sa-inquiry" class="button button--light">Request Info</a>
-                </div>
-                <div class="school-footer__secondary">
-                  <div class="text-white f2 mb-3">
-                    <p class="mb-1 f2">356 College Street<br />Middlebury, VT 05753</p>
-                    <a href="mailto:" class="text-white link-underline">internationalprograms@middlebury.edu</a>
-                    <br />
-                    <a href="tel:" class="text-white link-underline">802-443-5745</a>
+          <xsl:choose>
+            <xsl:when test="$roundKey = 'BL1'">
+              <footer class="school-footer school-footer--lite">
+                <div class="container">
+                  <div class="row">
+                    <div class="school-footer__primary">
+                      <p class="school-footer__text">Middlebury Bread Loaf School of English</p>
+                      <a href="https://learn.middlebury.edu/blse" class="button button--light">Request Info</a>
+                    </div>
+                    <div class="school-footer__secondary">
+                      <div class="text-white f2 mb-3">
+                        75 Franklin Street<br/>Middlebury, VT 05753<br/>
+                        <a href="mailto:blse@middlebury.edu" class="text-white link-underline">blse@middlebury.edu</a><br/>
+                        <a href="tel:+18024435418" class="text-white">802-443-5418</a>
+                      </div>
+                    </div>
                   </div>
-                  <ul class="d-inline-flex">
-                    <li class="mr-1">
-                      <a href="#" class="d-inline-block text-white hover-fadeout p-1">
-                        <svg class="icon f5 " focusable="false" aria-hidden="true">
-                          <use xlink:href="#icon-youtube" />
-                        </svg>
-                      </a>
-                    </li>
-                    <li class="mr-1">
-                      <a href="#" class="d-inline-block text-white hover-fadeout p-1">
-                        <svg class="icon f5 " focusable="false" aria-hidden="true">
-                          <use xlink:href="#icon-instagram" />
-                        </svg>
-                      </a>
-                    </li>
-                    <li class="mr-1">
-                      <a href="#" class="d-inline-block text-white hover-fadeout p-1">
-                        <svg class="icon f5 " focusable="false" aria-hidden="true">
-                          <use xlink:href="#icon-twitter" />
-                        </svg>
-                      </a>
-                    </li>
-                  </ul>
+                </div>
+              </footer>
+            </xsl:when>
+            <xsl:otherwise>
+              <div class="office-footer">
+                <div class="container">
+                  <div class="office-footer__row">
+                    <div class="office-footer__col">
+                      <h3 class="f3 mb-2">
+                        Middlebury Admissions
+                      </h3>
+                      <p class="f2">
+                        Emma Willard House<br/>
+                        131 South Main Street<br/>
+                        Middlebury, VT 05753
+                      </p>
+                    </div>
+                    <div class="office-footer__col">
+                      <h3 class="f3 mb-2">
+                        Contact Us
+                      </h3>
+                      <p class="f2">
+                        <a href="mailto:admissions@middlebury.edu" class="link-underline">admissions@middlebury.edu</a><br />
+                        <a href="tel:+1-802-443-3000" class="link-underline">(802) 443-3000</a>
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </footer>
+              <footer class="school-footer">
+                <div class="container">
+                  <div class="row">
+                    <div class="school-footer__main">
+                      <div class="row">
+                        <div class="school-footer__primary">
+                          <p class="school-footer__text">Help shape Middlebury&#039;s future.</p>
+                          <a href="https://engage.middlebury.edu/give" class="button button--light">Make a Gift</a>
+                        </div>
+                        <div class="school-footer__secondary">
+                          <div class="text-white f2 mb-3">
+                            <strong>Middlebury College</strong><br/>
+                            Middlebury, VT 05753<br/>
+                            <a href="tel:+18024435000" class="text-white">802-443-5000</a>
+                            <br/>
+                            <br/>
+                            <strong>Admissions</strong> <a class="text-white" href="tel:+18024433000">802-443-3000</a><br/>
+                            <a class="text-white link-underline" href="mailto:admissions@middlebury.edu">admissions@middlebury.edu</a><br/>
+                            <br/>
+                            <strong>Public Safety</strong> <a class="text-white" href="tel:+18024435911">802-443-5911</a><br/>
+                            <a class="text-white link-underline" href="mailto:publicsafety@middlebury.edu">publicsafety@middlebury.edu</a>
+                          </div>
+                          <ul class="d-inline-flex">
+                            <li class="mr-1">
+                              <a href="https://www.facebook.com/middleburycollege" class="d-inline-block text-white hover-fadeout p-1">
+                                <svg class="icon f5" focusable="false" aria-hidden="true">
+                                  <use xlink:href="#icon-facebook" />
+                                </svg>
+                              </a>
+                            </li>
+                            <li class="mr-1">
+                              <a href="https://instagram.com/middleburycollege" class="d-inline-block text-white hover-fadeout p-1">
+                                <svg class="icon f5" focusable="false" aria-hidden="true">
+                                  <use xlink:href="#icon-instagram" />
+                                </svg>
+                              </a>
+                            </li>
+                            <li class="mr-1">
+                              <a href="https://twitter.com/middlebury" class="d-inline-block text-white hover-fadeout p-1">
+                                <svg class="icon f5" focusable="false" aria-hidden="true">
+                                  <use xlink:href="#icon-twitter" />
+                                </svg>
+                              </a>
+                            </li>
+                            <li class="mr-1">
+                              <a href="https://vimeo.com/middlebury" class="d-inline-block text-white hover-fadeout p-1">
+                                <svg class="icon f5" focusable="false" aria-hidden="true">
+                                  <use xlink:href="#icon-vimeo" />
+                                </svg>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="school-footer__nav">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="footer-menu">
+                            <h3 class="footer-menu__title">Information For</h3>
+                            <ul class="footer-menu__list footer-menu__list--cols">
+                              <li class="footer-menu__item"><a href="https://m.middlebury.edu/as_is/" class="footer-menu__link">Students</a></li>
+                              <li class="footer-menu__item"><a href="http://www.middlebury.edu/alumni" class="footer-menu__link">Alumni</a></li>
+                              <li class="footer-menu__item"><a href="https://m.middlebury.edu/as_is/" class="footer-menu__link">Faculty and Staff</a></li>
+                              <li class="footer-menu__item"><a href="http://www.middlebury.edu/parents" class="footer-menu__link">Parents</a></li>
+                              <li class="footer-menu__item"><a href="http://www.middlebury.edu/newsroom/experts" class="footer-menu__link">Media</a></li>
+                              <li class="footer-menu__item"><a href="http://www.middlebury.edu/giving" class="footer-menu__link">Donors</a></li>
+                              <li class="footer-menu__item"><a href="http://www.middlebury.edu/offices/business/hr/jobseeker" class="footer-menu__link">Job Seekers</a></li>
+                              <li class="footer-menu__item"><a href="http://www.middlebury.edu/about/campus" class="footer-menu__link">Visitors</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="footer-menu">
+                            <h3 class="footer-menu__title">Quick Links</h3>
+                            <ul class="footer-menu__list footer-menu__list--cols">
+                              <li class="footer-menu__item"><a href="http://go.middlebury.edu/er" class="footer-menu__link">Emergency</a></li>
+                              <li class="footer-menu__item"><a href="http://go.middlebury.edu/calendar?academic=" class="footer-menu__link">Academic Calendar</a></li>
+                              <li class="footer-menu__item"><a href="http://go.middlebury.edu/bannerweb" class="footer-menu__link">BannerWeb</a></li>
+                              <li class="footer-menu__item"><a href="http://bookstore.middlebury.edu/home" class="footer-menu__link">Bookstore</a></li>
+                              <li class="footer-menu__item"><a href="http://boxoffice.middlebury.edu/" class="footer-menu__link">Box Office</a></li>
+                              <li class="footer-menu__item"><a href="http://map.middlebury.edu/" class="footer-menu__link">Campus Map</a></li>
+                              <li class="footer-menu__item"><a href="http://go.middlebury.edu/directory" class="footer-menu__link">Directory</a></li>
+                              <li class="footer-menu__item"><a href="http://www.middlebury.edu/about/campus/directions" class="footer-menu__link">Directions to Middlebury</a></li>
+                              <li class="footer-menu__item"><a href="https://secure.ethicspoint.com/domain/media/en/gui/28296/index.html" class="footer-menu__link">EthicsPoint</a></li>
+                              <li class="footer-menu__item"><a href="http://go.middlebury.edu/library" class="footer-menu__link">Library</a></li>
+                              <li class="footer-menu__item"><a href="http://museum.middlebury.edu/" class="footer-menu__link">Museum of Art</a></li>
+                              <li class="footer-menu__item"><a href="https://myapps.microsoft.com/gmhec.org" class="footer-menu__link">Oracle Cloud</a></li>
+                              <li class="footer-menu__item"><a href="http://go.middlebury.edu/helpdesk" class="footer-menu__link">Technology Help</a></li>
+                              <li class="footer-menu__item"><a href="http://www.middlebury.edu/sustainability/transportation" class="footer-menu__link">Transportation Options</a></li>
+                              <li class="footer-menu__item"><a href="http://go.middlebury.edu/webmail" class="footer-menu__link">Webmail</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </xsl:otherwise>
+          </xsl:choose>
           <nav class="midd-footer">
             <h2 class="sr-only"> Additional Navigation </h2>
             <div class="container">
@@ -211,12 +320,30 @@
                 <div class="col-lg-3">
                   <div class="mb-4 mb-lg-0">
                     <a href="https://www.middlebury.edu">
-                      <img src="images/middlebury-logo-white.svg" alt="Middlebury" width="195" height="71" />
+                      <img src="/images/middlebury-logo-white.svg" alt="Middlebury" width="195" height="71" />
                     </a>
                   </div>
                 </div>
                 <div class="col-lg-9">
                   <ul class="midd-footer__list">
+                    <li class="midd-footer__item">
+                      <a href="http://www.middlebury.edu/about" class="midd-footer__link"> About Middlebury </a>
+                    </li>
+                    <li class="midd-footer__item">
+                      <a href="http://www.middlebury.edu/giving" class="midd-footer__link"> Giving </a>
+                    </li>
+                    <li class="midd-footer__item">
+                      <a href="http://www.middlebury.edu/offices/business/hr/jobseeker" class="midd-footer__link"> Employment </a>
+                    </li>
+                    <li class="midd-footer__item">
+                      <a href="http://www.middlebury.edu/office/" class="midd-footer__link"> Offices and Services </a>
+                    </li>
+                    <li class="midd-footer__item">
+                      <a href="http://www.middlebury.edu/about/copyright" class="midd-footer__link"> Copyright </a>
+                    </li>
+                    <li class="midd-footer__item">
+                      <a href="http://www.middlebury.edu/about/privacy" class="midd-footer__link"> Privacy </a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -226,7 +353,8 @@
                 <use xlink:href="#icon-caret-up" />
               </svg>
               <span class="text-caps d-block">
-                <span class="sr-only">Back to</span> Top </span>
+                <span class="sr-only">Back to</span> Top
+              </span>
             </a>
           </nav>
         </div>
