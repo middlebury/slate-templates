@@ -6,7 +6,6 @@
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title></title>
         <style>
           a.midd-footer__link, a.text-white, a.footer-menu__link { color:#fff; }
           a.button--light { color:#0d395f; }
@@ -158,6 +157,15 @@
             </div>
           </header>
           <main class="main" id="midd-main" aria-labelledby="midd-page-header-label">
+            <div class="container px-0">
+              <header class="page-header" aria-labelledby="midd-page-header-label">
+                <div class="page-header__main">
+                  <div class="page-header__content">
+                    <h1 id="midd-page-header-label" class="page-header__title sr-only">Middlebury Admissions</h1>
+                  </div>
+                </div>
+              </header>
+            </div>
             <div class="container">
               <div class="row">
                 <div class="paragraphs paragraphs--wide">
