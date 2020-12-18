@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <style>
           a.midd-footer__link, a.text-white, a.footer-menu__link { color:#fff; }
-          a.button--light { color:#0d395f; }
+          a.button--light, a.school-nav__link, a.school-search__handle, .office-footer a.link-underline { color:#0d395f; }
         </style>
         <link rel="stylesheet" href="/shared/build.css" />
         <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;700&amp;family=Open+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet" />
@@ -140,18 +140,164 @@
             <div class="container">
               <div class="school-header__main">
                 <div class="school-header__logo">
-                  <a href="">
-                    <xsl:choose>
-                      <xsl:when test="$roundKey = 'BL1'">
+                  <xsl:choose>
+                    <xsl:when test="$roundKey = 'BL1'">
+                      <a href="https://www.middlebury.edu/school-english">
                         <img src="/images/blse-logo.svg" srcset="/images/blse-logo.svg 180w" sizes="(min-width: 1280px) 180px, 120px" alt="Logo for Middlebury Bread Loaf School of English" />
                         <span class="sr-only">Middlebury Bread Loaf School of English</span>
-                      </xsl:when>
-                      <xsl:otherwise>
+                      </a>
+                    </xsl:when>
+                    <xsl:otherwise>
+                      <a href="https://www.middlebury.edu/college">
                         <img src="/images/college-logo.svg" srcset="/images/college-logo.svg 180w" sizes="(min-width: 1280px) 180px, 120px" alt="Logo for Middlebury College" />
                         <span class="sr-only">Middlebury College</span>
-                      </xsl:otherwise>
-                    </xsl:choose>
-                  </a>
+                      </a>
+                    </xsl:otherwise>
+                  </xsl:choose>
+                </div>
+                <div class="school-header__content">
+                  <div class="school-nav">
+                    <button
+                      class="school-nav__handle"
+                      data-drawer="midd-nav-drawer"
+                      aria-label="Open navigation"
+                    >
+                      <svg class="icon mr-1" focusable="false" aria-hidden="true">
+                        <use xlink:href="#icon-bars" />
+                      </svg>
+                      <span class="d-none d-sm-inline">Menu</span>
+                    </button>
+                    <div class="school-nav__menu">
+                      <nav aria-labelledby="midd-main-nav-label">
+                        <h2 class="sr-only" id="midd-main-nav-label">Main navigation</h2>
+                        <ul class="school-nav__list">
+                          <xsl:choose>
+                            <xsl:when test="$roundKey = 'BL1'">
+                              <li class="school-nav__item">
+                                <a href="https://www.middlebury.edu/school-english/admissions" class="school-nav__link school-nav__link--top school-nav__link--active">Admissions</a>
+                              </li>
+                              <li class="school-nav__item">
+                                <a href="https://www.middlebury.edu/school-english/locations" class="school-nav__link school-nav__link--top">Locations</a>
+                              </li>
+                              <li class="school-nav__item">
+                                <a href="https://www.middlebury.edu/school-english/programs" class="school-nav__link school-nav__link--top">Program Information</a>
+                              </li>
+                              <li class="school-nav__item">
+                                <a href="https://www.middlebury.edu/school-english/teacher-network" class="school-nav__link school-nav__link--top">Bread Loaf Teacher Network</a>
+                              </li>
+                              <li class="school-nav__item">
+                                <a href="https://www.middlebury.edu/school-english/centennial" class="school-nav__link school-nav__link--top">Centennial</a>
+                              </li>
+                            </xsl:when>
+                            <xsl:otherwise>
+                              <li class="school-nav__item">
+                                <a href="https://www.middlebury.edu/college/admissions" class="school-nav__link school-nav__link--top school-nav__link--active">Admissions</a>
+                              </li>
+                              <li class="school-nav__item">
+                                <a href="http://www.middlebury.edu/academics" class="school-nav__link school-nav__link--top">Academics</a>
+                              </li>
+                              <li class="school-nav__item">
+                                <a href="http://www.middlebury.edu/student-life" class="school-nav__link school-nav__link--top">Student Life</a>
+                              </li>
+                              <li class="school-nav__item">
+                                <a href="https://athletics.middlebury.edu/landing/index" class="school-nav__link school-nav__link--top">Athletics</a>
+                              </li>
+                              <li class="school-nav__item">
+                                <a href="https://www.middlebury.edu/college/arts" class="school-nav__link school-nav__link--top">Arts</a>
+                              </li>
+                              <li class="school-nav__item">
+                                <a href="http://www.middlebury.edu/international" class="school-nav__link school-nav__link--top">Middlebury International</a>
+                              </li>
+                            </xsl:otherwise>
+                          </xsl:choose>
+                          <li class="school-nav__item d-none d-xl-block">
+                            <a
+                              href="https://www.middlebury.edu/school-english/search"
+                              class="school-search__handle"
+                              role="button"
+                              aria-label="Toggle site search"
+                              aria-expanded="false"
+                              aria-haspopup="true"
+                              data-toggle-target=".js-site-search"
+                              data-toggle-focus=".js-site-search-input"
+                              data-toggle-group="school-header"
+                            >
+                              <svg class="icon mr-1 school-search__mag" focusable="false" aria-hidden="true">
+                                <use xlink:href="#icon-search" />
+                              </svg>
+                              <svg class="icon mr-1 school-search__times" focusable="false" aria-hidden="true">
+                                <use xlink:href="#icon-times" />
+                              </svg>
+                              Search
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                      <nav aria-labelledby="midd-secondary-nav-label">
+                        <h2 class="sr-only" id="midd-secondary-nav-label">Secondary navigation</h2>
+                        <ul class="school-nav__list">
+                          <xsl:choose>
+                            <xsl:when test="$roundKey = 'BL1'">
+                              <li class="school-nav__item">
+                                <a href="https://www.middlebury.edu/school-english/current" class="school-nav__link school-nav__link--util">Current Students and Faculty</a>
+                              </li>
+                                <li class="school-nav__item">
+                                <a href="https://www.middlebury.edu/school-english/alumni" class="school-nav__link school-nav__link--util">Alumni</a>
+                              </li>
+                                <li class="school-nav__item">
+                                <a href="https://www.middlebury.edu/school-english/current/academic-information/catalogs" class="school-nav__link school-nav__link--util">Course Catalog</a>
+                              </li>
+                                <li class="school-nav__item">
+                                <a href="https://www.middlebury.edu/school-english/news" class="school-nav__link school-nav__link--util">News</a>
+                              </li>
+                                <li class="school-nav__item">
+                                <a href="https://www.middlebury.edu/school-english/contact" class="school-nav__link school-nav__link--util">Contact Us</a>
+                              </li>
+                            </xsl:when>
+                            <xsl:otherwise>
+                              <li class="school-nav__item">
+                                <a href="http://www.middlebury.edu/newsroom" class="school-nav__link school-nav__link--util">Newsroom</a>
+                              </li>
+                              <li class="school-nav__item">
+                                <a href="http://www.middlebury.edu/events" class="school-nav__link school-nav__link--util">Calendar of Events</a>
+                              </li>
+                              <li class="school-nav__item">
+                                <a href="https://www.middlebury.edu/office/" class="school-nav__link school-nav__link--util">Offices and Services</a>
+                              </li>
+                              <li class="school-nav__item">
+                                <a href="http://www.middlebury.edu/giving" class="school-nav__link school-nav__link--util">Giving</a>
+                              </li>
+                            </xsl:otherwise>
+                          </xsl:choose>
+                        </ul>
+                      </nav>
+                    </div>
+                    <div class="school-search">
+                      <a href="https://www.middlebury.edu/school-english/search" class="school-search__handle d-xl-none" role="button" aria-label="Toggle site search" aria-expanded="false" aria-haspopup="true" data-toggle-target=".js-site-search" data-toggle-focus=".js-site-search-input" data-toggle-group="school-header">
+                        <svg class="icon mr-1 school-search__mag " focusable="false" aria-hidden="true">
+                          <use xlink:href="#icon-search"/>
+                        </svg>
+                        <svg class="icon mr-1 school-search__times " focusable="false" aria-hidden="true">
+                          <use xlink:href="#icon-times"/>
+                        </svg>
+                        <span class="d-none d-sm-inline">Search</span>
+                      </a>
+                      <div class="school-search__content js-site-search">
+                        <form class="">
+                          <div class="input-group">
+                            <label for="midd-school-search" class="sr-only">Search</label>
+                            <input type="search" class="form-control js-site-search-input" id="midd-school-search" placeholder="Search"/>
+                            <button type="submit" class="button px-3 button--primary">
+                              <span class="sr-only">Search</span>
+                              <svg class="icon  " focusable="false" aria-hidden="true">
+                                <use xlink:href="#icon-search"/>
+                              </svg>
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -365,6 +511,102 @@
               </span>
             </a>
           </nav>
+        </div>
+        <div class="drawer" id="midd-nav-drawer" aria-hidden="true">
+          <div class="drawer__overlay" tabindex="-1" data-drawer-close="data-drawer-close">
+            <div class="drawer__content" role="dialog" aria-modal="true" aria-labelledby="midd-modal-1-title">
+              <div class="drawer__header">
+                <h2 class="sr-only" id="midd-modal-1-title">Navigation</h2>
+                <button class="drawer__close" aria-label="Close modal" data-drawer-close="data-drawer-close">
+                  <svg class="icon mr-1" focusable="false" aria-hidden="true">
+                    <use xlink:href="#icon-times" />
+                  </svg>
+                  Close
+                </button>
+              </div>
+              <div id="midd-modal-1-content">
+                <nav class="drawer-nav" aria-labelledby="midd-drawer-nav-label">
+                  <h2 class="sr-only" id="midd-drawer-nav-label">Navigation</h2>
+                  <ul class="drawer-nav__list drawer-nav__list--top">
+                    <xsl:choose>
+                      <xsl:when test="$roundKey = 'BL1'">
+                        <li class="drawer-nav__item">
+                          <a href="https://www.middlebury.edu/school-english/admissions" class="drawer-nav__link drawer-nav__link--top">Admissions</a>
+                        </li>
+                        <li class="drawer-nav__item">
+                          <a href="https://www.middlebury.edu/school-english/locations" class="drawer-nav__link drawer-nav__link--top">Locations</a>
+                        </li>
+                        <li class="drawer-nav__item">
+                          <a href="https://www.middlebury.edu/school-english/programs" class="drawer-nav__link drawer-nav__link--top">Program Information</a>
+                        </li>
+                        <li class="drawer-nav__item">
+                          <a href="https://www.middlebury.edu/school-english/teacher-network" class="drawer-nav__link drawer-nav__link--top">Bread Loaf Teacher Network</a>
+                        </li>
+                        <li class="drawer-nav__item">
+                          <a href="https://www.middlebury.edu/school-english/centennial" class="drawer-nav__link drawer-nav__link--top">Centennial</a>
+                        </li>
+                      </xsl:when>
+                      <xsl:otherwise>
+                        <li class="drawer-nav__item">
+                          <a href="https://www.middlebury.edu/college/admissions" class="drawer-nav__link drawer-nav__link--top">Admissions</a>
+                        </li>
+                        <li class="drawer-nav__item">
+                          <a href="http://www.middlebury.edu/academics" class="drawer-nav__link drawer-nav__link--top">Academics</a>
+                        </li>
+                        <li class="drawer-nav__item">
+                          <a href="http://www.middlebury.edu/student-life" class="drawer-nav__link drawer-nav__link--top">Student Life</a>
+                        </li>
+                        <li class="drawer-nav__item">
+                          <a href="https://athletics.middlebury.edu/landing/index" class="drawer-nav__link drawer-nav__link--top">Athletics</a>
+                        </li>
+                        <li class="drawer-nav__item">
+                          <a href="https://www.middlebury.edu/college/arts" class="drawer-nav__link drawer-nav__link--top">Arts</a>
+                        </li>
+                        <li class="drawer-nav__item">
+                          <a href="http://www.middlebury.edu/international" class="drawer-nav__link drawer-nav__link--top">Middlebury International</a>
+                        </li>
+                      </xsl:otherwise>
+                    </xsl:choose>
+                  </ul>
+                  <ul class="drawer-nav__list drawer-nav__list--util">
+                    <xsl:choose>
+                      <xsl:when test="$roundKey = 'BL1'">
+                        <li class="drawer-nav__item">
+                          <a href="https://www.middlebury.edu/school-english/current" class="drawer-nav__link drawer-nav__link--util">Current Students and Faculty</a>
+                        </li>
+                          <li class="drawer-nav__item">
+                          <a href="https://www.middlebury.edu/school-english/alumni" class="drawer-nav__link drawer-nav__link--util">Alumni</a>
+                        </li>
+                          <li class="drawer-nav__item">
+                          <a href="https://www.middlebury.edu/school-english/current/academic-information/catalogs" class="drawer-nav__link drawer-nav__link--util">Course Catalog</a>
+                        </li>
+                          <li class="drawer-nav__item">
+                          <a href="https://www.middlebury.edu/school-english/news" class="drawer-nav__link drawer-nav__link--util">News</a>
+                        </li>
+                          <li class="drawer-nav__item">
+                          <a href="https://www.middlebury.edu/school-english/contact" class="drawer-nav__link drawer-nav__link--util">Contact Us</a>
+                        </li>
+                      </xsl:when>
+                      <xsl:otherwise>
+                        <li class="drawer-nav__item">
+                          <a href="http://www.middlebury.edu/newsroom" class="drawer-nav__link drawer-nav__link--util">Newsroom</a>
+                        </li>
+                        <li class="drawer-nav__item">
+                          <a href="http://www.middlebury.edu/events" class="drawer-nav__link drawer-nav__link--util">Calendar of Events</a>
+                        </li>
+                        <li class="drawer-nav__item">
+                          <a href="https://www.middlebury.edu/office/" class="drawer-nav__link drawer-nav__link--util">Offices and Services</a>
+                        </li>
+                        <li class="drawer-nav__item">
+                          <a href="http://www.middlebury.edu/giving" class="drawer-nav__link drawer-nav__link--util">Giving</a>
+                        </li>
+                      </xsl:otherwise>
+                    </xsl:choose>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
         </div>
         <script src="/shared/build.js" async="true">
         </script>
