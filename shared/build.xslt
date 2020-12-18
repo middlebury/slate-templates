@@ -133,8 +133,16 @@
               <div class="school-header__main">
                 <div class="school-header__logo">
                   <a href="">
-                    <img src="images/schools-abroad-logo.svg" srcset="images/schools-abroad-logo.svg 186w" sizes="(min-width: 1280px) 186px, 124px" alt="Logo for Middlebury C.V. Starr Schools Abroad" />
-                    <span class="sr-only">Middlebury C.V. Starr Schools Abroad</span>
+                    <xsl:choose>
+                      <xsl:when test="$roundKey = 'BL1'">
+                        <img src="/images/blse-logo.svg" srcset="/images/blse-logo.svg 180w" sizes="(min-width: 1280px) 180px, 120px" alt="Logo for Middlebury Bread Loaf School of English" />
+                        <span class="sr-only">Middlebury Bread Loaf School of English</span>
+                      </xsl:when>
+                      <xsl:otherwise>
+                        <img src="/images/college-logo.svg" srcset="/images/college-logo.svg 180w" sizes="(min-width: 1280px) 180px, 120px" alt="Logo for Middlebury College" />
+                        <span class="sr-only">Middlebury College</span>
+                      </xsl:otherwise>
+                    </xsl:choose>
                   </a>
                 </div>
               </div>
