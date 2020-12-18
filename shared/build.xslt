@@ -12,9 +12,15 @@
         <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;700&amp;family=Open+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet" />
         <xsl:apply-templates select="xhtml:html/xhtml:head/node()" />
       </head>
-      <body class=" " id="midd-pagetop">
+      <body id="midd-pagetop">
         <xsl:copy-of select="xhtml:html/xhtml:body/@*" />
         <xsl:variable name="roundKey" select="*/fw:template/@application-roundKey" />
+        <xsl:attribute name="class">
+          <xsl:choose>
+            <xsl:when test="$roundKey = 'BL1'">theme-blse</xsl:when>
+            <xsl:otherwise>theme-college</xsl:otherwise>
+          </xsl:choose>
+        </xsl:attribute>
         <nav aria-labelledby="midd-skip-link">
           <a href="#midd-main" class="sr-only sr-only-focusable" id="midd-skip-link">Skip to content</a>
         </nav>
