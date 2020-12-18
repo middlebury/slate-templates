@@ -137,71 +137,6 @@
                     <span class="sr-only">Middlebury C.V. Starr Schools Abroad</span>
                   </a>
                 </div>
-                <div class="school-header__content">
-                  <div class="school-nav">
-                    <button class="school-nav__handle" data-drawer="midd-nav-drawer" aria-label="Open navigation">
-                      <svg class="icon mr-1 " focusable="false" aria-hidden="true">
-                        <use xlink:href="#icon-bars" />
-                      </svg>
-                      <span class="d-none d-sm-inline">Menu</span>
-                    </button>
-                    <div class="school-nav__menu">
-                      <nav aria-labelledby="midd-main-nav-label">
-                        <h2 class="sr-only" id="midd-main-nav-label">Main navigation</h2>
-                        <ul class="school-nav__list">
-                          <li class="school-nav__item d-none d-xl-block">
-                            <a href="/search" class="school-search__handle" role="button" aria-label="Toggle site search" aria-expanded="false" aria-haspopup="true" data-toggle-target=".js-site-search" data-toggle-focus=".js-site-search-input" data-toggle-group="school-header">
-                              <svg class="icon mr-1 school-search__mag " focusable="false" aria-hidden="true">
-                                <use xlink:href="#icon-search" />
-                              </svg>
-                              <svg class="icon mr-1 school-search__times " focusable="false" aria-hidden="true">
-                                <use xlink:href="#icon-times" />
-                              </svg> Search </a>
-                          </li>
-                        </ul>
-                      </nav>
-                      <nav aria-labelledby="midd-secondary-nav-label">
-                        <h2 class="sr-only" id="midd-secondary-nav-label">Secondary navigation</h2>
-                        <ul class="school-nav__list">
-                          <li class="school-nav__item">
-                            <a href="" class="school-nav__link school-nav__link--util">Midd Students</a>
-                          </li>
-                          <li class="school-nav__item">
-                            <a href="" class="school-nav__link school-nav__link--util">Parents</a>
-                          </li>
-                          <li class="school-nav__item">
-                            <a href="" class="school-nav__link school-nav__link--util">Advisors</a>
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
-                  </div>
-                  <div class="school-search">
-                    <a href="/search" class="school-search__handle d-xl-none" role="button" aria-label="Toggle site search" aria-expanded="false" aria-haspopup="true" data-toggle-target=".js-site-search" data-toggle-focus=".js-site-search-input" data-toggle-group="school-header">
-                      <svg class="icon mr-1 school-search__mag " focusable="false" aria-hidden="true">
-                        <use xlink:href="#icon-search" />
-                      </svg>
-                      <svg class="icon mr-1 school-search__times " focusable="false" aria-hidden="true">
-                        <use xlink:href="#icon-times" />
-                      </svg>
-                      <span class="d-none d-sm-inline">Search</span>
-                    </a>
-                    <div class="school-search__content js-site-search">
-                      <form class="">
-                        <div class="input-group">
-                          <label for="midd-school-search" class="sr-only">Search</label>
-                          <input type="search" class="form-control js-site-search-input" id="midd-school-search" placeholder="Search" />
-                          <button type="submit" class="button px-3 button--primary">
-                            <span class="sr-only">Search</span>
-                            <svg class="icon  " focusable="false" aria-hidden="true">
-                              <use xlink:href="#icon-search" />
-                            </svg>
-                          </button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </header>
@@ -214,76 +149,6 @@
               </div>
             </div>
           </main>
-          <div class="bg-blue-lighter py-lg-7 text-center border-t border-navy">
-            <div class="container">
-              <h2 class="h2 pt-4 pt-md-5 pt-lg-0 mb-lg-7"> What do you want? </h2>
-              <div class="cta-group">
-                <div class="cta-group__item">
-                  <p class="cta-group__text"> Lorem ipsum dolor sit </p>
-                  <a href="" class="cta-group__button button button--primary"> Call to action </a>
-                </div>
-                <div class="cta-group__item">
-                  <p class="cta-group__text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                  <a href="" class="cta-group__button button button--primary"> Call to action </a>
-                </div>
-                <div class="cta-group__item">
-                  <p class="cta-group__text"> Lorem ipsum dolor sit </p>
-                  <a href="" class="cta-group__button button button--primary"> Call to action </a>
-                </div>
-                <div class="cta-group__item">
-                  <p class="cta-group__text"> Lorem ipsum dolor sit </p>
-                  <a href="" class="cta-group__button button button--primary"> Call to action </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="office-footer">
-            <div class="container">
-              <div class="office-footer__row">
-                <div class="office-footer__col">
-                  <h3 class="f3 mb-2"> Middlebury Admissions </h3>
-                  <p class="f2"> Emma Willard House<br />131 South Main Street<br />Middlebury, VT 05753 </p>
-                </div>
-                <div class="office-footer__col">
-                  <h3 class="f3 mb-2"> Contact Us </h3>
-                  <p class="f2">
-                    <a href="mailto:admissions@middlebury.edu" class="link-underline">admissions@middlebury.edu</a>
-                    <br />
-                    <a href="tel:[object Object]">802-443-3000</a>
-                  </p>
-                  <ul class="d-inline-flex">
-                    <li class="mr-1">
-                      <a href="#" class="d-inline-block hover-fadein p-1">
-                        <svg class="icon  " focusable="false" aria-hidden="true">
-                          <use xlink:href="#icon-youtube" />
-                        </svg>
-                      </a>
-                    </li>
-                    <li class="mr-1">
-                      <a href="#" class="d-inline-block hover-fadein p-1">
-                        <svg class="icon  " focusable="false" aria-hidden="true">
-                          <use xlink:href="#icon-instagram" />
-                        </svg>
-                      </a>
-                    </li>
-                    <li class="mr-1">
-                      <a href="#" class="d-inline-block hover-fadein p-1">
-                        <svg class="icon  " focusable="false" aria-hidden="true">
-                          <use xlink:href="#icon-twitter" />
-                        </svg>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="office-footer__col">
-                  <h3 class="f3 mb-2"> Office Hours </h3>
-                  <p class="f2">
-                    <strong>Monday-Thursday</strong>
-                    <br />8:30 AM-5:00 PM<br /><strong>Monday-Thursday</strong><br />8:30 AM-5:00 PM </p>
-                </div>
-              </div>
-            </div>
-          </div>
           <footer class="school-footer school-footer--lite">
             <div class="container">
               <div class="row">
@@ -350,37 +215,6 @@
                 <span class="sr-only">Back to</span> Top </span>
             </a>
           </nav>
-        </div>
-        <div class="drawer" id="midd-nav-drawer" aria-hidden="true">
-          <div class="drawer__overlay" tabindex="-1" data-drawer-close="data-drawer-close">
-            <div class="drawer__content" role="dialog" aria-modal="true" aria-labelledby="midd-modal-1-title">
-              <div class="drawer__header">
-                <h2 class="sr-only" id="midd-modal-1-title">Navigation</h2>
-                <button class="drawer__close" aria-label="Close modal" data-drawer-close="data-drawer-close">
-                  <svg class="icon mr-1 " focusable="false" aria-hidden="true">
-                    <use xlink:href="#icon-times" />
-                  </svg> Close </button>
-              </div>
-              <div id="midd-modal-1-content">
-                <nav class="drawer-nav" aria-labelledby="midd-drawer-nav-label">
-                  <h2 class="sr-only" id="midd-drawer-nav-label">Navigation</h2>
-                  <ul class="drawer-nav__list drawer-nav__list--top">
-                  </ul>
-                  <ul class="drawer-nav__list drawer-nav__list--util">
-                    <li class="drawer-nav__item">
-                      <a href="" class="drawer-nav__link drawer-nav__link--util">Midd Students</a>
-                    </li>
-                    <li class="drawer-nav__item">
-                      <a href="" class="drawer-nav__link drawer-nav__link--util">Parents</a>
-                    </li>
-                    <li class="drawer-nav__item">
-                      <a href="" class="drawer-nav__link drawer-nav__link--util">Advisors</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-          </div>
         </div>
         <script src="/shared/build.js" async="true">
         </script>
