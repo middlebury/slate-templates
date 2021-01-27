@@ -9,6 +9,22 @@
         <style>
           a.midd-footer__link, a.text-white, a.footer-menu__link { color:#fff; }
           a.button--light, a.school-nav__link, a.school-search__handle, .office-footer a.link-underline { color:#0d395f; }
+          body .container { max-width: inherit; }
+          .paragraphs .container {
+            max-width: 900px !important;
+            width: 100%;
+            margin: 0 auto;
+            padding-left: 50px;
+            padding-right: 50px;
+            box-sizing: border-box;
+          }
+          @media only screen and (min-width: 1024px) {
+            table.table {
+              width: 1280px !important;
+              margin-left: -192px;
+              table-layout: auto;
+            }
+          }
         </style>
         <link rel="stylesheet" href="/shared/build.css" />
         <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;700&amp;family=Open+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet" />
