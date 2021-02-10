@@ -18,6 +18,9 @@
             padding-right: 50px;
             box-sizing: border-box;
           }
+          .paragraphs ul.subtabs li a {
+            height: auto;
+          }
           @media only screen and (min-width: 1024px) {
             table.table.sortable {
               width: 1280px !important;
