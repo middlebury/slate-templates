@@ -22,7 +22,7 @@
             height: auto;
           }
           @media only screen and (min-width: 1024px) {
-            table.table.sortable {
+            table.table.display.sortable {
               width: 1280px !important;
               margin-left: -192px;
               table-layout: auto;
