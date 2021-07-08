@@ -22,10 +22,14 @@
             height: auto;
           }
           @media only screen and (min-width: 1024px) {
-            table.table.display.sortable {
+            table.table.sortable {
               width: 1280px !important;
               margin-left: -192px;
               table-layout: auto;
+            }
+            .two_column_with_header table.table.sortable {
+              width: 100% !important;
+              margin-left: 0;
             }
           }
         </style>
